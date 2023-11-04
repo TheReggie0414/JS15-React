@@ -1,35 +1,55 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.scss";
+import { Button } from "./components/button";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0);
+export const App = () => {
+  const name = "Taras";
+  const lastName = "Sam";
+  const fullName = `${name} ${lastName}`;
+  const elem = <p>Hi</p>;
+  let content = null;
+  const arr = [1, 2, 3, 5, 4];
 
+  if (Math.random() > 0.4) {
+    content = elem;
+  } else {
+    content = <p>Bye</p>;
+  }
+
+  console.log("🚀 ~ file: App.jsx:6 ~ App ~ fullName==>>", fullName);
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div
+        id="dsdfds"
+        data-id
+        data-label={fullName}
+        style={{ border: "1px solid red" }}
+      >
+        <br />
+        <input />
+        <h1>Hello {fullName}</h1>
+        {arr.map((item) => (
+          <Button key={item} />
+        ))}
+        {Math.random() > 0.4 ? elem : null}
+        {!!arr.length && elem}
+        <ul>
+          {arr.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        {elem}
+        {content}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div></div>
     </>
   );
-}
+};
+
+// const x = 1;
+// const y = 1;
+
+// export function foo() {}
+
+// export { x, y };
 
 export default App;

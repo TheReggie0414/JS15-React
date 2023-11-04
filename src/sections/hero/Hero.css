@@ -1,0 +1,24 @@
+.hero {
+  display: flex;
+}
+
+.hero-article {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-article-title {
+  color: #488df4;
+  text-transform: uppercase;
+}
+.hero-article-subtitle {
+  margin-top: 20px;
+  color: #42434b;
+  text-transform: uppercase;
+}
+.hero-img {
+  flex: 1;
+  height: 500px;
+}

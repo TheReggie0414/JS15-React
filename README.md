@@ -1,8 +1,16 @@
-# React + Vite
+# Lecture
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## React
 
-Currently, two official plugins are available:
+> [Quick start](https://react.dev/learn)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Docs
+
+> [Lecture](https://docs.google.com/document/d/1FIznsjczhBLCbcyB9BCwIZZRpmvoubP3mGjuP-oO-pM/edit?usp=sharing)
+
+# Homework
+
+## CV
+
+Create your CV in react  
+Media query [reference](https://www.w3schools.com/Css/css3_mediaqueries.asp)
