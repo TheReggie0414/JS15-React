@@ -6,7 +6,8 @@
 
 ## Docs
 
-> [Lecture](https://docs.google.com/document/d/1FIznsjczhBLCbcyB9BCwIZZRpmvoubP3mGjuP-oO-pM/edit?usp=sharing)
+> [Lecture](https://docs.google.com/document/d/1FIznsjczhBLCbcyB9BCwIZZRpmvoubP3mGjuP-oO-pM/edit?usp=sharing)  
+> [Virtual Dom](https://drukarnia.com.ua/articles/virtual-dom-in-react-Au-O-)
 
 # Homework
 
