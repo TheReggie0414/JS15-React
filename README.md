@@ -10,7 +10,11 @@
 
 # Homework
 
-## CV
+## Button (optional)
 
-Create your CV in react  
-Media query [reference](https://www.w3schools.com/Css/css3_mediaqueries.asp)
+Create button component  
+Button should receive 5 props  
+Children, variant, color, size, disabled
+Create at least 2 variants  
+Add your own styles to button  
+[Example](https://mui.com/joy-ui/react-button/#introduction)
