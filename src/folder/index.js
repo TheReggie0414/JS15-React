@@ -1,0 +1,1 @@
+export { obj } from "./const";

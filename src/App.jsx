@@ -1,55 +1,29 @@
+import { Typography } from "./components/typography";
+import { Box } from "./components/box";
 import { Button } from "./components/button";
+import { Spacer } from "./components/spacer";
+import { Greetings } from "./components/greetings";
+import { List } from "./components/list";
+import list from "./folder/const";
 import "./App.css";
 
 export const App = () => {
-  const name = "Taras";
-  const lastName = "Sam";
-  const fullName = `${name} ${lastName}`;
-  const elem = <p>Hi</p>;
-  let content = null;
-  const arr = [1, 2, 3, 5, 4];
-
-  if (Math.random() > 0.4) {
-    content = elem;
-  } else {
-    content = <p>Bye</p>;
-  }
-
-  console.log("🚀 ~ file: App.jsx:6 ~ App ~ fullName==>>", fullName);
+  const title = "Hello";
   return (
     <>
-      <div
-        id="dsdfds"
-        data-id
-        data-label={fullName}
-        style={{ border: "1px solid red" }}
-      >
-        <br />
-        <input />
-        <h1>Hello {fullName}</h1>
-        {arr.map((item) => (
-          <Button key={item} />
-        ))}
-        {Math.random() > 0.4 ? elem : null}
-        {!!arr.length && elem}
-        <ul>
-          {arr.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-        {elem}
-        {content}
-      </div>
-      <div></div>
+      <Box>
+        <Typography text="Taras" title={title} visible />
+        <Spacer>
+          {/* <Greetings greet /> */}
+          <h3>fdgdf</h3>
+          <h3>fdgdf</h3>
+        </Spacer>
+        <List list={list} />
+        <Greetings greet />
+        <Button />
+      </Box>
     </>
   );
 };
-
-// const x = 1;
-// const y = 1;
-
-// export function foo() {}
-
-// export { x, y };
 
 export default App;
