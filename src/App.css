@@ -44,3 +44,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.light {
+  background-color: aliceblue;
+}
+
+.dark {
+  background-color: black;
+}

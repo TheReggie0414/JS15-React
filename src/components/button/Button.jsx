@@ -1,4 +1,4 @@
-export const Button = () => {
+export function Button({ text }) {
   let count = 0;
 
   return (
@@ -8,7 +8,7 @@ export const Button = () => {
         count++;
       }}
     >
-      Click {count}
+      Click {count} {text}
     </button>
   );
-};
+}
