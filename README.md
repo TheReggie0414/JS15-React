@@ -15,7 +15,7 @@
 
 Create button component  
 Button should receive 5 props  
-Children, variant, color, size, disabled
+children, variant, color, size, disabled  
 Create at least 2 variants  
 Add your own styles to button  
 [Example](https://mui.com/joy-ui/react-button/#introduction)
