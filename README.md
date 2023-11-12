@@ -15,7 +15,7 @@
 Create button component  
 On btn click show text  
 On btn second click hide text  
-(Optional) Add animation
+(Optional) add animation
 
 ## Todo list
 
