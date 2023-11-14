@@ -26,7 +26,6 @@ export const App = () => {
     console.log("mount effect===>>", count);
     console.log("authorised effect===>>", authorised);
   }, [count, authorised]);
-
   console.log("🚀 ~ file: App.jsx:23 ~ App ~ arrList==>>", arrList);
 
   return (
