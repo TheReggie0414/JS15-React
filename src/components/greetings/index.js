@@ -1,1 +1,0 @@
-export { Greetings } from "./Greeting";

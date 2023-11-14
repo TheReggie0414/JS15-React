@@ -2,27 +2,31 @@
 
 ## React
 
-> [useState](https://react.dev/reference/react/useState)
+> [useEffect](https://react.dev/reference/react/useEffect)
+
+## React old docs
+
+> [useEffect](https://uk.legacy.reactjs.org/docs/hooks-effect.html)
 
 ## Docs
 
-> [Lecture](https://docs.google.com/document/d/1XdBse8nFNth2xY7UxJjtW9mweJwtqq4HedCryE9FN34/edit)
+> [Lecture](https://docs.google.com/document/d/1w2-MCPDh2j4m42SkXE2PVfbGR9E0wv15KIrnGk-MkF0/edit?usp=sharing)
 
 # Homework
 
-## Collapse
+## Timer
 
-Create button component  
-On btn click show text  
-On btn second click hide text  
-(Optional) add animation
+Create Timer component  
+Create timer based on setTimeout  
+Render time in dom
 
-## Todo list
+## Fetch
 
-Create input, button and list component  
-Store input value in state  
-On btn click add value from state to todo list
+Fetch posts from  
+'https://dummyjson.com/posts'  
+Render posts in dom
 
-## LocalStorage (optional)
+## Geolocation
 
-Store todo list in local storage
+Get users location on load  
+Render those values
