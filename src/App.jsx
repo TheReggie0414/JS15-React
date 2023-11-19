@@ -1,66 +1,47 @@
-import { useState, useEffect } from "react";
-import { Drawler } from "./components/drawler";
-import { Button } from "./components/button";
-import { Timer } from "./components/timer";
-import { Text } from "./components/text";
+import { useEffect, useState, useCallback } from "react";
+import { ButtonMemo } from "./components/button";
 
 import "./App.css";
 
 export const App = () => {
-  const [open, setOpen] = useState(false);
   const [count, setCount] = useState(0);
-  const [products, setProducts] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const obj = { a: 1, b: 2, c: 3 };
-  console.log("🚀 ~ file: App.jsx:13 ~ App ~ products==>>", products);
-  const a = obj.a;
+  const [num, setNum] = useState(1);
+  const [state, setState] = useState(0);
 
-  useEffect(() => {
-    console.log("count==>>", count);
+  // const sum = (a, b) => a + b;
 
-    return () => {
-      console.log("cleanup function count==>>", count);
-    };
-  }, [count]);
-
-  useEffect(() => {
-    console.log("obj==>>", a);
-  }, [a]);
-
-  useEffect(() => {
-    const loadProducts = async () => {
-      setLoading(true);
-      const data = await fetch("https://dummyjson.com/products");
-      const products = await data.json();
-      setLoading(false);
-      setProducts(products.products);
-    };
-
-    loadProducts();
+  const sum = useCallback((a, b) => {
+    console.log("useCallback", b);
+    return a + b;
   }, []);
+
+  const onClick = useCallback(() => {
+    setCount((prevState) => prevState + 1);
+  }, []);
+
+  useEffect(() => {
+    console.log("effect", sum(count, num));
+  }, [count, num, sum]);
 
   return (
     <div>
-      <Drawler open={open} setOpen={setOpen} />
-      <Timer />
-      {loading && <p>Loading...</p>}
-      {products && <p>Products {products.length}</p>}
-      {count < 10 && (
-        <Button
-          onClick={() => {
-            setCount((prevState) => prevState + 1);
-            setCount((prevState) => prevState + 1);
-          }}
-        />
-      )}
-      <Text count={count} />
+      <p>{count}</p>
+      <ButtonMemo onClick={onClick} title="Click" />
+
       <button
         onClick={() => {
-          setOpen(true);
+          setState(state + 1);
         }}
       >
-        Open
+        {state}
       </button>
+      <input
+        type="number"
+        onBlur={(e) => {
+          const value = +e.target.value;
+          setNum(value);
+        }}
+      />
     </div>
   );
 };
