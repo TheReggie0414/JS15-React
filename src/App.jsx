@@ -1,48 +1,36 @@
-import { useEffect, useState, useCallback } from "react";
-import { ButtonMemo } from "./components/button";
-
+import { useCallback, useEffect, useState } from "react";
+import { HeaderMemo } from "./components/header";
+import { Section } from "./components/section";
 import "./App.css";
 
+const add = (a, b) => a + b;
+const arr = [1, 2, 3, 4, 5];
+
 export const App = () => {
-  const [count, setCount] = useState(0);
-  const [num, setNum] = useState(1);
-  const [state, setState] = useState(0);
+  const [theme, setTheme] = useState("light");
 
-  // const sum = (a, b) => a + b;
-
-  const sum = useCallback((a, b) => {
-    console.log("useCallback", b);
-    return a + b;
+  const onClickMemo = useCallback(() => {
+    setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
   }, []);
 
-  const onClick = useCallback(() => {
-    setCount((prevState) => prevState + 1);
-  }, []);
+  // const arr = [props.a, props.b];
 
   useEffect(() => {
-    console.log("effect", sum(count, num));
-  }, [count, num, sum]);
+    console.log(
+      "🚀 ~ file: App.jsx:19 ~ useEffect ~ add(1, 1)==>>",
+      add(arr[0], arr[1]),
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [arr, add]);
 
   return (
-    <div>
-      <p>{count}</p>
-      <ButtonMemo onClick={onClick} title="Click" />
-
-      <button
-        onClick={() => {
-          setState(state + 1);
-        }}
-      >
-        {state}
-      </button>
-      <input
-        type="number"
-        onBlur={(e) => {
-          const value = +e.target.value;
-          setNum(value);
-        }}
+    <>
+      <HeaderMemo
+        // theme={theme}
+        onClick={onClickMemo}
       />
-    </div>
+      <Section theme={theme} />
+    </>
   );
 };
 
