@@ -2,18 +2,25 @@
 
 ## React
 
-> [useMemo](https://react.dev/reference/react/useMemo)  
-> [useCallback](https://react.dev/reference/react/useCallback)  
-> [memo](https://react.dev/reference/react/memo)
+> [useContext](https://react.dev/reference/react/useContext)
 
 ## Docs
 
-> [Lecture](https://docs.google.com/document/d/1vL2qN7hOuFQuptYDXDAmF-hINzZNZxCP-qyle4BRDew/edit?usp=sharing)
+> [Lecture](https://docs.google.com/document/d/1tsKOjKs6rayV8kGbGp_8torAefyiAhOSSEEb8De8t8Y/edit?usp=sharing)
 
 # Homework
 
-## Memo
+## Login
 
-Create Input component  
-Pass props defaultValue, onChange  
-Memoize Input
+Create user context  
+Crate Header cmp  
+Add Button login if user context is empty  
+On click trigger [api](https://dummyjson.com/docs/auth)  
+On success hide button and show user name
+
+Create Posts cmp  
+If user context if hide content and tell user to login  
+If users is authed get list of [posts](https://dummyjson.com/docs/posts)  
+Crate a Post cmp and add feature to show if post is authed user's post
+
+P.S. Keep everything simple. Do not spend too much time on styling and detailing

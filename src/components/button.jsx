@@ -1,8 +1,7 @@
-import { memo } from "react";
+import { useThemeContext } from "../hooks/useThemeContext";
 
-export const Button = ({ title, onClick }) => {
-  console.log("btn rerender");
-  return <button onClick={onClick}>{title}</button>;
+export const Button = () => {
+  const { theme } = useThemeContext();
+
+  return <button>{theme}</button>;
 };
-
-export const ButtonMemo = memo(Button);
