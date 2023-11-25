@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Button } from "./button";
+import { ThemeButton } from "./theme-button";
 import { LangContext } from "../provider/lang";
 
 export const Section = () => {
@@ -14,7 +14,7 @@ export const Section = () => {
       >
         Change lang
       </button>
-      <Button />
+      <ThemeButton />
     </>
   );
 };
