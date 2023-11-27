@@ -10,7 +10,7 @@
 
 # Homework
 
-## Ref (Optional)
+## Ref (optional)
 
 Create ref in App cmp  
 Create ColorPicker cmp
