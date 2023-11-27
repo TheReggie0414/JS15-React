@@ -2,30 +2,19 @@
 
 ## React
 
-> [useContext](https://react.dev/reference/react/useContext)
+> [useRef](https://react.dev/reference/react/useRef)
 
 ## Docs
 
-> [Lecture](https://docs.google.com/document/d/1tsKOjKs6rayV8kGbGp_8torAefyiAhOSSEEb8De8t8Y/edit?usp=sharing)
+> [Lecture](https://docs.google.com/document/d/1O1ocH5M5TvnAgj1nvAYpENta3xjhtD13N-NaXy5YrEw/edit?usp=sharing)
 
 # Homework
 
-## Login
+## Ref (Optional)
 
-Create user context  
-Crate Header cmp  
-Create login Button cmp  
-On click trigger [api](https://dummyjson.com/docs/auth)  
-Add data to context  
-Hide btn if login was successful  
-And show user name
-
-Create Posts cmp  
-If user user is not logged in  
-Show msg 'Please login'  
-If users is logged in get list of [posts](https://dummyjson.com/docs/posts)  
-Loop through the posts and render them  
-Create a Post cmp  
-Add feature to show if authed user's is author of the current post
-
-P.S. Keep everything simple. Do not spend too much time on styling and detailing
+Create ref in App cmp  
+Create ColorPicker cmp
+Receive ref from App  
+Use ref on color input  
+Add button in app  
+On click show input value
