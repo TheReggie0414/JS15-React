@@ -2,7 +2,7 @@
 
 ## React
 
-> [useRef](https://react.dev/reference/react/useRef)
+> [Events](https://react.dev/learn/responding-to-events)
 
 ## Docs
 
@@ -10,11 +10,15 @@
 
 # Homework
 
-## Ref (optional)
+## Table
 
-Create ref in App cmp  
-Create ColorPicker cmp
-Receive ref from App  
-Use ref on color input  
-Add button in app  
-On click show input value
+Create Table cmp  
+Render 4 rows and 4 columns  
+In each cell paste number of cell  
+Add only one click handler on table  
+On click show cell number
+
+## Tabs
+
+Create reusable Tab cmp  
+Examples: [mui](https://mui.com/material-ui/react-tabs/), [antd](https://ant.design/components/tabs), [chakra-ui](https://chakra-ui.com/docs/components/tabs)
