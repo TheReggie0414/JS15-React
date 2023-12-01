@@ -6,7 +6,7 @@
 
 ## Docs
 
-> [Lecture](https://docs.google.com/document/d/1O1ocH5M5TvnAgj1nvAYpENta3xjhtD13N-NaXy5YrEw/edit?usp=sharing)
+> [Lecture](https://docs.google.com/document/d/15UJjb92Noo8_dCEzdxKKBGZLPYNIuleTew7lZm3fDBM/edit?usp=sharing)
 
 # Homework
 
@@ -20,5 +20,10 @@ On click show cell number
 
 ## Tabs
 
-Create reusable Tab cmp  
+Create your own Tab cmp  
+Don't install any lib for this task  
+This cmp should be reusable  
+And should work with different scenarios
+
+P.S. Take a look at how it's done in ui libs  
 Examples: [mui](https://mui.com/material-ui/react-tabs/), [antd](https://ant.design/components/tabs), [chakra-ui](https://chakra-ui.com/docs/components/tabs)
