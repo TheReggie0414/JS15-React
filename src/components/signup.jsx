@@ -1,16 +1,24 @@
-import { Formik, Form, Field, useFormik } from "formik";
+import { Formik, Form, Field, useFormik, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
+const signUpSchema = Yup.object({
+  email: Yup.string().email("Enter correct email").required("Required"),
+  password: Yup.string().required("Required"),
+});
 
 export const SignUp = () => {
   return (
     <Formik
-      initialValues={{ email: "", password: "" }}
+      initialValues={{ email: "taras@gmail.com", password: "" }}
+      validationSchema={signUpSchema}
       onSubmit={(values, formikBag) => {
         formikBag.resetForm();
 
         console.log("🚀 SignUp ~ values==>>", values);
       }}
     >
-      {({ touched }) => {
+      {({ touched, errors }) => {
+        console.log("🚀 ~ file: signup.jsx:21 ~ SignUp ~ error==>>", errors);
         return (
           <Form>
             <label htmlFor="email">Email:</label>
@@ -25,6 +33,7 @@ export const SignUp = () => {
                 borderRadius: "4px",
               }}
             />
+            <ErrorMessage name="email" />
             <br />
             <label htmlFor="password">Password:</label>
             <br />
@@ -38,6 +47,7 @@ export const SignUp = () => {
                 borderRadius: "4px",
               }}
             />
+            <ErrorMessage name="password" />
             <br />
             <button type="submit">Submit</button>
           </Form>
