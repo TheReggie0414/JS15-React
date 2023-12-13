@@ -52,3 +52,7 @@
 .dark {
   background-color: black;
 }
+
+.selected {
+  background-color: gold;
+}

@@ -1,18 +1,22 @@
 # Lecture
 
-## React Hook Form
+## React Router DOM
 
-> [Overview](https://react-hook-form.com/get-started)
+> [Overview](https://v5.reactrouter.com/web/guides/quick-start)
 
 ## Docs
 
-> [Lecture](https://docs.google.com/document/d/1-A_9ulQWnp3CBNrEQ_O-oTd9GBZOIpCLm4p5dHWc2uQ/edit?usp=sharing)
+> [Lecture](https://docs.google.com/document/d/1W5s1DCCej6xk88rMAYhUoxvN48HRURblRLMXhr9JFCY/edit?usp=sharing)
 
 # Homework
 
-## Form
+## App
 
-Create form with react-hook-form lib  
-Add fields: first name, last name, city  
-Add validation that every field is required  
-Show error msg under field
+Create react app  
+On home page get list of products  
+Use get all products [api](https://dummyjson.com/docs/products)  
+Render list of product cards  
+Show img, title, price  
+On click navigate to separate page  
+On that page add button back  
+And show all properties of products
