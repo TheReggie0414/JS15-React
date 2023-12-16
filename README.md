@@ -10,6 +10,4 @@
 
 # Homework
 
-## Module
-
-Work on module project
+Focus on module project
