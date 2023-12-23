@@ -1,19 +1,31 @@
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { fetchProduct } from "../store/products/action";
-import { useProductsSelector } from "../store/products/selectors";
+import { fetchProducts, fetchProduct } from "../store/productsSlice";
 
 export const Products = () => {
+  const [value, setValue] = useState("");
   const dispatch = useDispatch();
-  const products = useProductsSelector();
-  console.log("🚀 ~ file: products.jsx:5 ~ Products ~ products==>>", products);
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
 
   return (
-    <button
-      onClick={() => {
-        dispatch(fetchProduct());
-      }}
-    >
-      Load Products
-    </button>
+    <div>
+      <p>Products</p>
+      <input
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
+      />
+      <button
+        onClick={() => {
+          dispatch(fetchProduct(value));
+        }}
+      >
+        Get Product
+      </button>
+    </div>
   );
 };
