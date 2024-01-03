@@ -17,6 +17,3 @@ test("Async cmp renders correctly", async () => {
 
   expect(userNameElem).toBeInTheDocument();
 });
-
-// class component
-//
